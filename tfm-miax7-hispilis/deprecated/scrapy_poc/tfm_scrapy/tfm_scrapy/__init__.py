@@ -1,0 +1,1 @@
+from .spiders import quotes_spider

@@ -1,0 +1,13 @@
+version: '3'
+services:
+  best-execution:
+    environment:
+      - PYTHONPATH=/workspaces/tfm-miax7/src
+    build:
+      context: ..
+      dockerfile: ./dockerfiles/Dockerfile
+    volumes:
+      - ..:/workspaces/tfm-miax7:cached
+
+    # Overrides default command so things don't shut down after the process ends.
+    command: sleep infinity

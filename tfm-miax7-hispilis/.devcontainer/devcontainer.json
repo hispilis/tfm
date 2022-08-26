@@ -1,0 +1,103 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.194.0/containers/docker-existing-dockerfile
+{
+	"name": "tfm-miax7",
+	// Sets the run context to one level up instead of the .devcontainer folder.
+	"context": "..",
+	// Update the 'dockerFile' property if you aren't using the standard 'Dockerfile' filename.
+	"dockerFile": "../dockerfiles/Dockerfile",
+	// Set *default* container specific settings.json values on container create.
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/bash",
+		"python.pythonPath": "/usr/local/bin/python",
+		"python.linting.enabled": true,
+		"python.linting.pylintEnabled": true,
+		"python.testing.pytestPath": "/usr/local/bin/pytest",
+		"python.testing.pytestEnabled": true,
+		"python.testing.unittestEnabled": false,
+		"python.testing.autoTestDiscoverOnSaveEnabled": true,
+		"files.exclude": {
+			".pytest_cache": true,
+			"*/**/__pycache__": true,
+			"*/**/.ipynb_checkpoints": true,
+			"*.pyc": true,
+		},
+		"python.testing.pytestArgs": [
+			"-s",
+			"--disable-pytest-warnings",
+			"./src/webapi/tests",
+			"./src/ca/tests",
+		],
+		"editor.suggestSelection": "first",
+		"editor.formatOnSave": true,
+		"editor.rulers": [
+			80
+		],
+		"jupyter.jupyterServerType": "local",
+		"python.analysis.typeCheckingMode": "basic",
+		"zenMode.centerLayout": true,
+		"zenMode.hideLineNumbers": false,
+		"zenMode.hideTabs": false,
+		"python.formatting.provider": "black",
+		"telemetry.telemetryLevel": "off",
+		"workbench.editorAssociations": {
+			"*.pdf": "pdf.preview",
+		},
+		"editor.codeActionsOnSave": {
+			"source.organizeImports": true
+		},
+		"editor.bracketPairColorization.enabled": true,
+		"editor.guides.bracketPairs": "active",
+		"workbench.editor.enablePreview": false,
+		"workbench.iconTheme": "vscode-icons",
+		"editor.smoothScrolling": true,
+		"files.exclude": {
+			"*.pyc": true,
+			"**/__pycache__": true,
+			"**/.ipynb_checkpoints": true,
+			"**/.pytest_cache": true
+		},
+		"editor.find.addExtraSpaceOnTop": false,
+		"workbench.list.smoothScrolling": true,
+		"workbench.startupEditor": "none",
+		// "git.enableCommitSigning": true,
+		"cSpell.language": "en, es",
+		"python.analysis.completeFunctionParens": true,
+		"python.experiments.enabled": false,
+		"pythonIndent.trimLinesWithOnlyWhitespace": true,
+		"notebook.cellToolbarLocation": {
+			"default": "right",
+			"jupyter-notebook": "left"
+		},
+		"path-intellisense.autoTriggerNextSuggestion": true
+	},
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"eamodio.gitlens",
+		"njpwerner.autodocstring",
+		"ms-python.python",
+		"streetsidesoftware.code-spell-checker",
+		"VisualStudioExptTeam.vscodeintellicode",
+		"ms-toolsai.jupyter",
+		"ms-toolsai.jupyter-keymap",
+		"ms-toolsai.jupyter-renderers",
+		"christian-kohler.path-intellisense",
+		"ms-python.vscode-pylance",
+		"KevinRose.vsc-python-indent",
+		"streetsidesoftware.code-spell-checker-spanish"
+	],
+	"runArgs": [
+		"--gpus=all"
+	],
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+	// Uncomment the next line to run commands after the container is created - for example installing curl.
+	// "postCreateCommand": "apt-get update && apt-get install -y curl",
+	// "postCreateCommand": "git config --global --add safe.directory /workspaces/tfm-miax7",
+	// Uncomment when using a ptrace-based debugger like C++, Go, and Rust
+	// "runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ],
+	// Uncomment to use the Docker CLI from inside the container. See https://aka.ms/vscode-remote/samples/docker-from-docker.
+	// "mounts": [ "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind" ],
+	// Uncomment to connect as a non-root user if you've added one. See https://aka.ms/vscode-remote/containers/non-root.
+	// "remoteUser": "miax7-developer"
+}

@@ -1,0 +1,30 @@
+numpy
+pandas
+requests
+beautifulsoup4
+nltk
+sklearn
+tensorflow==2.8.0
+seaborn
+protobuf==3.19.4
+spacy==3.2.3
+fsspec
+gcsfs
+transformers
+tqdm
+datasets
+sentence-transformers
+ipywidgets
+p_tqdm
+subject_classification_spanish
+matplotlib
+keras==2.8.0
+sktime
+torch --extra-index-url https://download.pytorch.org/whl/cu116
+torchvision --extra-index-url https://download.pytorch.org/whl/cu116
+torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
+more-itertools
+scipy
+datasets
+# faiss-cpu o faiss-gpu -> instalar en un entorno linux o mediante el devcontainer. En Colab y Kaggle también funciona correctamente.
+# multimodal-transformers -> instalar en un entorno aparte ya que requiere unas versiones de librerías incompatibles con el resto de librerías. En Colab y Kaggle funciona correctamente.

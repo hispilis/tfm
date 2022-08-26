@@ -1,0 +1,2 @@
+C:\Users\...\tfm-miax7\src\scrapy>scrapy startproject tfm_scrapy
+C:\Users\....\tfm-miax7\src\scrapy\tfm_scrapy\tfm_scrapy>scrapy crawl europapress

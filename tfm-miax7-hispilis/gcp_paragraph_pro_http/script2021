@@ -1,0 +1,2 @@
+# curl -m 3610 -X POST https://paragraph-http-2-kmluniw32q-uc.a.run.app -H "Authorization:bearer $(gcloud auth print-identity-token)" -H "Content-Type:application/json" -d '{"fecha": "01/01/2021"}' &
+curl -m 3610 -X POST https://paragraph-http-2-kmluniw32q-uc.a.run.app -H "Authorization:bearer $(gcloud auth print-identity-token)" -H "Content-Type:application/json" -d '{"start_date": "01/01/2021", "end_date": "31/01/2021"}' &
